@@ -1,11 +1,9 @@
 const express = require('express');
-const router = express.Router();
-const galleryItems = require('../modules/gallery.data');
-
-// DO NOT MODIFY THIS FILE FOR BASE MODE
+const galleryRouter = express.Router();
+const pool = require('../modules/gallery.pool');
 
 // PUT Route
-router.put('/like/:id', (req, res) => {
+galleryRouter.put('/like/:id', (req, res) => {
     console.log(req.params);
     const galleryId = req.params.id;
     for(const galleryItem of galleryItems) {
@@ -17,8 +15,13 @@ router.put('/like/:id', (req, res) => {
 }); // END PUT Route
 
 // GET Route
-router.get('/', (req, res) => {
-    res.send(galleryItems);
+galleryRouter.get('/', (req, res) => {
+    let queryString = 'Select * FROM gallery'
+    pool.query(queryString).then(result => {
+        res.send(result.rows);
+    }).catch(error => {
+        res.sendStatus(200);
+    })
 }); // END GET Route
 
-module.exports = router;
+module.exports = galleryRouter;

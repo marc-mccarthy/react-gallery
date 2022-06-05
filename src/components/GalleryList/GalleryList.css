@@ -1,15 +1,15 @@
-.App {
+.GalleryList {
     text-align: center;
 }
 
-.App-header {
+.GalleryList-header {
     background-color: #222;
     padding: 1em;
     color: white;
     margin-bottom: 1em;
 }
 
-.App-title {
+.GalleryList-title {
     font-size: 1.5em;
 }
 

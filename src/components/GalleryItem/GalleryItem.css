@@ -1,15 +1,19 @@
-.App {
+.GalleryItem {
     text-align: center;
 }
 
-.App-header {
+.GalleryItem-header {
     background-color: #222;
     padding: 1em;
     color: white;
     margin-bottom: 1em;
 }
 
-.App-title {
+.GalleryItem-title {
     font-size: 1.5em;
 }
 
+img {
+    width: 100px;
+    height: 100px;
+}
