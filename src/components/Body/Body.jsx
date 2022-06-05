@@ -5,24 +5,21 @@ import './Body.css';
 import GalleryList from '../GalleryList/GalleryList';
 
 function Body() {
-    const [galleryList, setGalleryList] = useState([]);
+    const [memories, setMemories] = useState([]);
     useEffect(() => {
-        getGalleryList();
+        getMemories();
     }, []);
     
-    const getGalleryList = () => {
+    const getMemories = () => {
         axios.get('/gallery').then(response => {
-            setGalleryList(response.data);
+            setMemories(response.data);
         }).catch(error => {
-            console.log(`Error: ${error}`);
+            alert(`Received Error: ${error}`);
         });
     }
 
     return (
-        <div className="Body">
-            <p>This is the Gallery Below:</p>
-            <GalleryList listArray = {galleryList}/>
-        </div>
+        <GalleryList memories = {memories}/>
     );
 }
 

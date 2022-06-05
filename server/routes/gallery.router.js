@@ -1,6 +1,7 @@
 const express = require('express');
 const galleryRouter = express.Router();
-const pool = require('../modules/gallery.pool');
+const galleryItems = require('../modules/gallery.data')
+// const pool = require('../modules/gallery.pool');
 
 // PUT Route
 galleryRouter.put('/like/:id', (req, res) => {
@@ -16,6 +17,11 @@ galleryRouter.put('/like/:id', (req, res) => {
 
 // GET Route
 galleryRouter.get('/', (req, res) => {
+    res.send(galleryItems);
+}); // END GET Route
+
+/*
+galleryRouter.get('/', (req, res) => {
     let queryString = 'Select * FROM gallery'
     pool.query(queryString).then(result => {
         res.send(result.rows);
@@ -23,5 +29,6 @@ galleryRouter.get('/', (req, res) => {
         res.sendStatus(200);
     })
 }); // END GET Route
+*/
 
 module.exports = galleryRouter;

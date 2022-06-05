@@ -1,12 +1,18 @@
 import React from 'react';
+import {useState} from 'react';
 import './GalleryItem.css';
 
-function GalleryItem() {
+
+function GalleryItem(props) {
+    const [likes, setLikes] = useState(0);
+
     return (
-        <div className="GalleryItem">
-            <img src='../../../public/images/10k.jpg'></img>
-            
-        </div>
+        <li>
+            <p>{props.memory.description}</p>
+            <img src={props.memory.path}/>
+            <button>Like</button>
+            <p>{props.memory.likes} likes for this</p>
+        </li>
     );
 }
 
