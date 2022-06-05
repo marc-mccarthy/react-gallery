@@ -4,12 +4,12 @@ import './GalleryItem.css';
 
 
 function GalleryItem(props) {
-    const [likes, setLikes] = useState(0);
+    const [show, setShow] = useState(true);
+    const handleClicks = () => setShow(!show);
 
     return (
         <li>
-            <p>{props.memory.description}</p>
-            <img src={props.memory.path}/>
+            {show ? <img onClick={handleClicks} src={props.memory.path}/> : <p className='descriptionMemory' onClick={handleClicks}>{props.memory.description}</p>}
             <button>Like</button>
             <p>{props.memory.likes} likes for this</p>
         </li>
