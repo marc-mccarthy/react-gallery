@@ -14,16 +14,31 @@
 }
 
 li {
-    flex-direction: vertical;
-    padding: 10px;
-    margin: 20px;
+    color: white;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    padding: 5px;
+    margin: 30px;
+    background-color: rgb(167, 159, 159);
+    border-radius: 10px;
 }
 
-img {
+img, .descriptionMemory {
+    font-size: larger;
     height: 300px;
     width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: left;
 }
 
-.descriptionMemory {
-    padding: 50% 20% 0% 20%;
+button {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: larger;
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
 }

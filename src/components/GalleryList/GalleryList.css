@@ -1,20 +1,6 @@
-.GalleryList {
-    text-align: center;
-}
-
-.GalleryList-header {
-    background-color: #222;
-    padding: 1em;
-    color: white;
-    margin-bottom: 1em;
-}
-
-.GalleryList-title {
-    font-size: 1.5em;
-}
-
 ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-

@@ -7,7 +7,7 @@ function GalleryList(props) {
     return (
         <div>
             <ul>
-                {props.memories.map(memory => (<GalleryItem memory = {memory} />))}
+                {props.memories.map(memory => (<GalleryItem memory = {memory}/>))}
             </ul>
         </div>
     );
