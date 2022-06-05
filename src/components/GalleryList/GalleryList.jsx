@@ -5,7 +5,7 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 function GalleryList(props) {
 
     return (
-        <div>
+        <div id="allMemories">
             <ul>
                 {props.memories.map(memory => (<GalleryItem memory = {memory}/>))}
             </ul>

@@ -1,5 +1,6 @@
 .App {
     text-align: center;
+    background-image: url("/images/tape.jpg");
 }
 
 .App-header {
@@ -12,4 +13,3 @@
 .App-title {
     font-size: 1.5em;
 }
-
