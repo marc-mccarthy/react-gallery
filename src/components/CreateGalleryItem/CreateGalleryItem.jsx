@@ -3,14 +3,18 @@ import React from 'react';
 import './CreateGalleryItem.css';
 
 function createGalleryItem() {
-    axios.post('/gallery', {
-        path: document.getElementById("newItemPath").value,
-        description: document.getElementById("newItemDescription").value,
-    }).then(response => {
-        console.log(response);
-    }).catch(error => {
-        alert(`Received Error: ${error}`);
-    })
+    if (document.getElementById("newItemPath").value === '' || document.getElementById("newItemDescription").value === '') {
+        alert('You are missing an input');
+    } else {
+        axios.post('/gallery', {
+            path: document.getElementById("newItemPath").value,
+            description: document.getElementById("newItemDescription").value,
+        }).then(response => {
+            console.log(response);
+        }).catch(error => {
+            alert(`Received Error: ${error}`);
+        })
+    }
 }
 
 function CreateGalleryItem(props) {
