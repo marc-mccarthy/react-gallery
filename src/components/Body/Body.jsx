@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import CreateGalleryItem from '../CreateGalleryItem/CreateGalleryItem';
 import GalleryList from '../GalleryList/GalleryList';
 
 function Body() {
@@ -16,7 +17,10 @@ function Body() {
     }
 
     return (
-        <GalleryList memories = {memories}/>
+        <div>
+            <CreateGalleryItem/>
+            <GalleryList memories = {memories}/>
+        </div>
     );
 }
 

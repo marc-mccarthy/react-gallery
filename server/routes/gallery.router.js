@@ -22,10 +22,22 @@ galleryRouter.get('/', (req, res) => {
 }); // END GET Route
 */
 
+// POST Route
+galleryRouter.post('/', (req, res) => {
+    console.log(req.body);
+    let queryString = 'INSERT INTO gallery ("path", "description") VALUES ($1, $2)';
+    let values = [req.body.path, req.body.description];
+    pool.query(queryString, values).then(result => {
+        res.sendStatus(200);
+    }).catch(result => {
+        res.sendStatus(500);
+    })
+})
+
 // PUT Route
 galleryRouter.put('/like/:id', (req, res) => {
     console.log(req.params);
-    let queryString = `UPDATE gallery SET likes = likes + 1 WHERE id = $1`;
+    let queryString = 'UPDATE gallery SET likes = likes + 1 WHERE id = $1';
     let values = [req.params.id];
     pool.query(queryString, values).then(result => {
         res.sendStatus(200);

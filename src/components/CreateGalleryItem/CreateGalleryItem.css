@@ -1,0 +1,26 @@
+.CreateGalleryItem {
+    display: flex;
+    justify-content: flext-start;
+    margin: 0% 20%;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+input {
+    margin-right: 20px;
+    height: 35px;
+    width: 40%;
+    min-width: 300px;
+    border-radius: 10px;
+}
+
+.CreateGalleryItem-header {
+    background-color: #222;
+    padding: 1em;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.CreateGalleryItem-title {
+    font-size: 1.5em;
+}
