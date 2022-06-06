@@ -68,6 +68,4 @@ galleryRouter.delete('/:id', (req, res) => {
     })
 }); // END DELETE Route
 
-
-
 module.exports = galleryRouter;
