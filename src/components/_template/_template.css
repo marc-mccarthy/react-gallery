@@ -1,15 +1,15 @@
-.App {
+._template {
     text-align: center;
 }
 
-.App-header {
+._template-header {
     background-color: #222;
     padding: 1em;
     color: white;
     margin-bottom: 1em;
 }
 
-.App-title {
+._template-title {
     font-size: 1.5em;
 }
 

@@ -2,17 +2,6 @@
     text-align: center;
 }
 
-.GalleryItem-header {
-    background-color: #222;
-    padding: 1em;
-    color: white;
-    margin-bottom: 1em;
-}
-
-.GalleryItem-title {
-    font-size: 1.5em;
-}
-
 li {
     display: flex;
     justify-items: center;
