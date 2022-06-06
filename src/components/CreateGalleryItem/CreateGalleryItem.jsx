@@ -3,13 +3,9 @@ import React from 'react';
 import './CreateGalleryItem.css';
 
 function createGalleryItem() {
-    let newMemory = {
+    axios.post('/gallery', {
         path: document.getElementById("newItemPath").value,
         description: document.getElementById("newItemDescription").value,
-    }
-    axios.post({
-        url: '/',
-        data: newMemory,
     }).then(response => {
         console.log(response);
     }).catch(error => {
