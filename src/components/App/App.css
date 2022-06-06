@@ -1,12 +1,12 @@
 .App {
     text-align: center;
-    background-image: url("/images/tape3.jpg");
+    background-image: url("/images/tape.jpg");
     background-size: contain;
 }
 
 .App-header {
-    background-color: #222;
-    padding: 1em;
+    background-color: black;
+    padding: .8em;
     color: white;
     margin-bottom: 1em;
 }
@@ -14,28 +14,3 @@
 .App-title {
     font-size: 1.5em;
 }
-
-button {
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: larger;
-    height: 30px;
-    width: 100px;
-    margin-top: 5px;
-    cursor: pointer;
-    box-shadow: 0 7px #999;
-}
-
-button:hover {
-    background-color: lightskyblue;
-}
-
-button:active {
-    color: white;
-    background-color: blue;
-    box-shadow: 0 4px rgb(136, 134, 134);
-    transform: translateY(4px);
-}
-
-

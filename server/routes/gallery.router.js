@@ -32,7 +32,17 @@ galleryRouter.post('/', (req, res) => {
     }).catch(result => {
         res.sendStatus(500);
     })
-})
+}); // End POST Route
+
+// GET Route
+galleryRouter.get('/', (req, res) => {
+    let queryString = 'Select * FROM gallery ORDER BY id ASC'
+    pool.query(queryString).then(result => {
+        res.send(result.rows);
+    }).catch(error => {
+        res.sendStatus(200);
+    })
+}); // END GET Route
 
 // PUT Route
 galleryRouter.put('/like/:id', (req, res) => {
@@ -46,14 +56,18 @@ galleryRouter.put('/like/:id', (req, res) => {
     })
 }); // END PUT Route
 
-// GET Route
-galleryRouter.get('/', (req, res) => {
-    let queryString = 'Select * FROM gallery ORDER BY id ASC'
-    pool.query(queryString).then(result => {
-        res.send(result.rows);
-    }).catch(error => {
+// DELETE Route
+galleryRouter.delete('/:id', (req, res) => {
+    console.log(req.params);
+    let queryString = 'DELETE FROM gallery WHERE id = $1';
+    let values = [req.params.id];
+    pool.query(queryString, values).then(result => {
         res.sendStatus(200);
+    }).catch(result => {
+        res.sendStatus(500);
     })
-}); // END GET Route
+}); // END DELETE Route
+
+
 
 module.exports = galleryRouter;
