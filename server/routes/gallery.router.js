@@ -22,6 +22,9 @@ galleryRouter.get('/', (req, res) => {
 }); // END GET Route
 */
 
+// Bypass encryption for Heroku Postgres testing
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 // POST Route
 galleryRouter.post('/', (req, res) => {
     console.log(req.body);

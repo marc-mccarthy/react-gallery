@@ -1,6 +1,8 @@
 const pg = require('pg');
+require('dotenv').config();
 
-// DO NOT MODIFY THIS FILE FOR BASE MODE
+/*
+// Local Database
 let galleryPool = new pg.Pool({
     hostname: 'localhost',
     database: 'react_gallery',
@@ -8,5 +10,15 @@ let galleryPool = new pg.Pool({
     max: 20,
     idleTimeoutMillis: 30000
 })
+*/
+
+// Heroku Postgres Database connectionString
+const galleryPool = new pg.Pool({
+    label: 'React Gallery',
+    connectionString: process.env.DATABASE_URL,
+    max: 20,
+    idleTimeoutMillis: 30000,
+    ssl: true 
+});
 
 module.exports = galleryPool;
