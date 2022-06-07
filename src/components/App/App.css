@@ -1,14 +1,22 @@
 .App {
     text-align: center;
-    background-image: url("/images/tape.jpg");
+    background-image: url('/public/images/tape.jpg');
     background-size: contain;
 }
 
 .App-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
     padding: .8em;
     color: white;
     margin-bottom: 1em;
+}
+
+h1 {
+    margin-left: 35px;
+    margin-right: 35px;
 }
 
 .App-title {

@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import * as React from 'react';
+import {useState} from 'react';
+import Button from '@mui/material/Button';
 import axios from 'axios';
 import './CreateGalleryItem.css';
 
@@ -32,9 +34,11 @@ function CreateGalleryItem(props) {
 
     return (
         <div className="CreateGalleryItem">
-            <input onChange={changePath} id="newItemPath" placeholder="https://www.example.com" type="url"/>
-            <input onChange={changeDescription} id="newItemDescription" placeholder="Description" type="text"/>
-            <button onClick={createMemory}>Submit</button>
+            <form>
+                <input onChange={changePath} id="newItemPath" placeholder="e.g. https://unsplash.com/photos/hrOXaenH640" type="url"/>
+                <input onChange={changeDescription} id="newItemDescription" placeholder="e.g. We went to Mars and never came back." type="text"/>
+                <Button variant="outlined" onClick={createMemory} id="submitButton" type="submit">Submit</Button>
+            </form>
         </div>
     );
 }

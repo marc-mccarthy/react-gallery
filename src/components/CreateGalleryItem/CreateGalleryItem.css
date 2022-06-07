@@ -1,12 +1,5 @@
-.CreateGalleryItem {
-    display: flex;
-    justify-content: flext-start;
-    margin: 0% 20%;
-    text-align: left;
-    flex-wrap: wrap;
-}
-
 input {
+    font-size: large;
     margin-right: 20px;
     height: 35px;
     width: 40%;
@@ -14,13 +7,14 @@ input {
     border-radius: 10px;
 }
 
-.CreateGalleryItem-header {
-    background-color: #222;
-    padding: 1em;
+#submitButton {
     color: white;
-    margin-bottom: 1em;
-}
-
-.CreateGalleryItem-title {
-    font-size: 1.5em;
+    background-color: blue;
+    border: none;
+    border-radius: 8px;
+    font-size: medium;
+    height: 35px;
+    width: 80px;
+    margin: 5px;
+    cursor: pointer;
 }
