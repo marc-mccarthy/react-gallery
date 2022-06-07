@@ -36,7 +36,7 @@ galleryRouter.post('/', (req, res) => {
 
 // GET Route
 galleryRouter.get('/', (req, res) => {
-    let queryString = 'Select * FROM gallery ORDER BY id ASC'
+    let queryString = 'SELECT * FROM gallery ORDER BY id ASC'
     pool.query(queryString).then(result => {
         res.send(result.rows);
     }).catch(error => {
