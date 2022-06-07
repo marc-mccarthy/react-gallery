@@ -16,7 +16,7 @@ function CreateGalleryItem(props) {
     }
 
     function createMemory() {
-        if (document.getElementById("newItemPath").value === '' || document.getElementById("newItemDescription").value === '') {
+        if (newPath === '' || newDescription === '') {
             alert('You are missing an input');
         } else {
             axios.post('/gallery', {
@@ -32,7 +32,7 @@ function CreateGalleryItem(props) {
 
     return (
         <div className="CreateGalleryItem">
-            <input onChange={changePath} id="newItemPath" placeholder="Path to Image" type="url"/>
+            <input onChange={changePath} id="newItemPath" placeholder="https://www.example.com" type="url"/>
             <input onChange={changeDescription} id="newItemDescription" placeholder="Description" type="text"/>
             <button onClick={createMemory}>Submit</button>
         </div>
