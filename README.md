@@ -1,9 +1,25 @@
-# Project Name
+# React Gallery
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+## Heroku Link
+
+[React Gallery](https://react-gallery-2.herokuapp.com/)
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+My first React application. This is a gallery of pictures that takes in a URL input for a picture and another for a description. This is built with the CRUD concept using a Postgres database. As of now, this is just filled with pictures from my past.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Interface
+
+![wireframe](./public/images/wireframe.png)
+
+## Languages
+
+JavaScript, CSS, HTML, Postgresql, and Markdown demonstrated.
+
+## Packages
+
+This is built using React, Material UI, Node.js with Express, Pg, Nodemon, Axios, and DotEnv utilized. (Multer soon)
+
+## Future Updates
+
+Future updates are unknown at this time.
