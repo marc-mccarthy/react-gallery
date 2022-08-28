@@ -10,7 +10,7 @@ My first React application. This is a gallery of pictures that takes in a URL in
 
 ## Interface
 
-![wireframe](./public/images/wireframe.png)
+![wireframe](./wireframes/wireframe.png)
 
 ## Languages
 
