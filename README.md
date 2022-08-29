@@ -22,4 +22,4 @@ This is built using React, Material UI, Node.js with Express, Pg, Nodemon, Axios
 
 ## Future Updates
 
-Future updates are unknown at this time.
+Future updates are unknown at this time. Possibly. more pictures.
