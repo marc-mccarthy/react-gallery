@@ -38,16 +38,5 @@ INSERT INTO gallery ("path", "description") VALUES
 ('images/grand-lake.jpg', 'A beautiful city in Colorado with a campground and many bears. Up in the hills past the town.'),
 ('images/utah.jpg', 'Scenic Route 12 through Utah with the colors reflecting off the landscape.'),
 ('images/badlands.jpg', 'The Badlands is one of the weirdest places. It''s like an alien planet.'),
-('images/bryce-canyon.jpg', 'Bryce Canyon National Park in Utah. Another weird landscape, but nice colors.');
-
--- POST
-INSERT INTO gallery ("path", "description") VALUES ('https://www.majorgeeks.com/images/logos/majorgeeks.gif', 'Where I get my geek on');
-
--- GET
-SELECT * FROM gallery ORDER BY id ASC;
-
--- PUT
-UPDATE gallery SET likes = likes + 1 WHERE id = 2;
-
--- DELETE
-DELETE FROM gallery WHERE id = 14;
+('images/bryce-canyon.jpg', 'Bryce Canyon National Park in Utah. Another weird landscape, but nice colors.'),
+('https://www.majorgeeks.com/images/logos/majorgeeks.gif', 'Where I get my geek on');
